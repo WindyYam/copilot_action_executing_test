@@ -18,7 +18,7 @@ class SydneyAsync:
     async def run_sydney_prompt_async(self, prompt, attachment = None) -> Future:
         result = ''
         async for response in self.sydney.ask_stream(prompt, attachment=attachment):
-            print(response, end="", flush=True)
+            #print(response, end="", flush=True)
             result += response
         return result
 
